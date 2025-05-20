@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 
 const competitors = [
-  { name: 'Prime Video', src: './primevideo.png', alt: 'Prime Video' },
-  { name: 'Apple TV', src: './appletv.png', alt: 'Apple TV' },
-  { name: 'Disney+ Hotstar', src: './hotstar.png', alt: 'Disney+ Hotstar' },
-  { name: 'HBO Max', src: './hbo.png', alt: 'HBO Max' },
-  { name: 'Paramount+', src: './paramount.png', alt: 'Paramount+' },
-  { name: 'Peacock', src: './peacock.png', alt: 'Peacock' },
+  { name: 'Prime Video', src: process.env.PUBLIC_URL + '/primevideo.png', alt: 'Prime Video' },
+  { name: 'Apple TV', src: process.env.PUBLIC_URL + '/appletv.png', alt: 'Apple TV' },
+  { name: 'Disney+ Hotstar', src: process.env.PUBLIC_URL + '/hotstar.png', alt: 'Disney+ Hotstar' },
+  { name: 'HBO Max', src: process.env.PUBLIC_URL + '/hbo.png', alt: 'HBO Max' },
+  { name: 'Paramount+', src: process.env.PUBLIC_URL + '/paramount.png', alt: 'Paramount+' },
+  { name: 'Peacock', src: process.env.PUBLIC_URL + '/peacock.png', alt: 'Peacock' },
 ];
 
 const description = `Netflix sets itself apart with a strong focus on localized global content, a powerful AI-driven recommendation engine, and seamless user experience. It pioneered binge-watching and is expanding into interactive content and gaming, creating deeper engagement. Its commitment to innovation and personalization keeps it ahead in a crowded streaming market.`;

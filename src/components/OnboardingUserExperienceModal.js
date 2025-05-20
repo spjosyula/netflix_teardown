@@ -60,7 +60,7 @@ const OnboardingUserExperienceModal = ({ isOpen, onClose }) => {
             {/* Right: Image */}
             <div className="flex-1 flex items-center justify-center">
               <img 
-                src="./image.png" 
+                src={process.env.PUBLIC_URL + '/image.png'}
                 alt="Netflix Sign Up Screenshot" 
                 className="rounded-lg shadow-lg max-w-full w-[480px] h-auto border border-[#222]"
                 style={{minWidth: '320px', background: '#111'}}
