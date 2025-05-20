@@ -27,7 +27,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center netflix-linear-gradient-bg">
+    <div className="w-screen h-screen flex items-center justify-center netflix-linear-gradient-bg overflow-hidden">
       <div className="flex flex-col items-center justify-center w-full h-full">
         <div className="relative" style={{ width: '515px', height: '176px', maxWidth: '95vw' }}>
           <span className="absolute top-[-10px] left-0 font-[Average] text-white text-[36px] leading-none sm:text-[36px] text-[28px]" style={{ width: '60px', height: '36px' }}>The</span>
