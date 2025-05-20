@@ -1,0 +1,24 @@
+/* Common background styles for consistency across pages */
+.netflix-gradient-bg {
+  background: radial-gradient(ellipse 60% 60% at 50% 50%, #4D1919 0%, #000 100%);
+}
+
+/* Alternative linear gradient matching what's in the Hero component */
+.netflix-linear-gradient-bg {
+  background: linear-gradient(270deg, #000000 12.98%, #4D1919 49.11%, #000000 88.46%);
+}
+
+/* Custom utility classes for modal styling */
+.text-maroon {
+  color: #800000;
+}
+.font-average {
+  font-family: 'Average', serif;
+}
+.font-chonburi {
+  font-family: 'Chonburi', serif;
+}
+.align-super {
+  vertical-align: super;
+  font-size: 0.6em;
+}
