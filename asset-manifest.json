@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/netflix-teardown/static/css/main.66988547.css",
-    "main.js": "/netflix-teardown/static/js/main.ea7fa757.js",
+    "main.js": "/netflix-teardown/static/js/main.19181c9b.js",
     "index.html": "/netflix-teardown/index.html",
     "main.66988547.css.map": "/netflix-teardown/static/css/main.66988547.css.map",
-    "main.ea7fa757.js.map": "/netflix-teardown/static/js/main.ea7fa757.js.map"
+    "main.19181c9b.js.map": "/netflix-teardown/static/js/main.19181c9b.js.map"
   },
   "entrypoints": [
     "static/css/main.66988547.css",
-    "static/js/main.ea7fa757.js"
+    "static/js/main.19181c9b.js"
   ]
 }
