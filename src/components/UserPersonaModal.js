@@ -34,14 +34,16 @@ const personas = [
 
 const UserPersonaModal = ({ isOpen, onClose }) => {
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
+    if (typeof document !== 'undefined' && document.body) {
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+      return () => {
+        document.body.style.overflow = '';
+      };
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [isOpen]);
 
   if (!isOpen) return null;
@@ -57,7 +59,7 @@ const UserPersonaModal = ({ isOpen, onClose }) => {
       <div className="fixed inset-0 overflow-y-auto bg-black">
         <div className="min-h-screen w-full">
           {/* Header Section */}
-          <div className="relative py-6 px-4 sm:px-6">
+          <div className="relative py-6 px-4 sm:px-6 flex flex-row items-center justify-center gap-4">
             <button
               onClick={onClose}
               className="absolute right-4 top-6 text-white hover:text-netflix-red transition-colors"
@@ -67,8 +69,11 @@ const UserPersonaModal = ({ isOpen, onClose }) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-[Chonburi] text-[#800000] text-center pr-12">
-              User Personas
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-average text-maroon text-center pr-2">
+              User
+            </h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-average text-white text-center">
+              Personas
             </h2>
           </div>
 

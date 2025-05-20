@@ -35,14 +35,16 @@ const hypotheses = [
 
 const RecommendedAnalysisMetricsModal = ({ isOpen, onClose }) => {
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
+    if (typeof document !== 'undefined' && document.body) {
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+      return () => {
+        document.body.style.overflow = '';
+      };
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [isOpen]);
 
   if (!isOpen) return null;
@@ -70,9 +72,13 @@ const RecommendedAnalysisMetricsModal = ({ isOpen, onClose }) => {
 
           {/* Heading */}
           <div className="mt-16 mb-12 flex items-start">
-            <span className="font-chonburi text-maroon text-[84px] md:text-[120px] lg:text-[170px] leading-none pr-2" style={{lineHeight: '0.8', marginTop: '0.1em'}}>&</span>
+            <span className="font-chonburi text-white text-[84px] md:text-[120px] lg:text-[170px] leading-none pr-2" style={{lineHeight: '0.8', marginTop: '0.123em'}}>&</span>
             <div className="flex flex-col justify-center">
-              <span className="font-average text-maroon text-[39px] md:text-[60px] lg:text-[80px] leading-none" style={{letterSpacing: '-2px'}}>Recommended Analysis</span>
+              <span
+                className="font-average text-maroon text-[39px] md:text-[60px] lg:text-[80px] leading-none -ml-4 sm:-ml-8 md:-ml-10"
+                style={{letterSpacing: '-2px'}}>
+                Recommended Analysis
+              </span>
               <span className="font-average text-maroon text-[39px] md:text-[60px] lg:text-[80px] leading-none" style={{letterSpacing: '-2px'}}>Metrics Hypothesis</span>
             </div>
           </div>

@@ -8,6 +8,15 @@
   background: linear-gradient(270deg, #000000 12.98%, #4D1919 49.11%, #000000 88.46%);
 }
 
+@media (max-width: 640px) {
+  .netflix-linear-gradient-bg {
+    /* Use a more vertical gradient and less banding for mobile */
+    background: linear-gradient(180deg, #000 0%, #4D1919 60%, #000 100%);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 /* Custom utility classes for modal styling */
 .text-maroon {
   color: #800000;

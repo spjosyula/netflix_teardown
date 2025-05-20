@@ -3,14 +3,16 @@ import React, { useEffect } from 'react';
 const ProblemStatementModal = ({ isOpen, onClose }) => {
   useEffect(() => {
     console.log('Modal mounted, isOpen:', isOpen);
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
+    if (typeof document !== 'undefined' && document.body) {
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+      return () => {
+        document.body.style.overflow = '';
+      };
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [isOpen]);
 
   if (!isOpen) return null;
@@ -39,10 +41,17 @@ const ProblemStatementModal = ({ isOpen, onClose }) => {
 
           {/* Heading */}
           <div className="mt-16 mb-12 flex items-start">
-            <span className="font-chonburi text-maroon text-[110px] md:text-[140px] lg:text-[170px] leading-none pr-2" style={{lineHeight: '0.8', marginTop: '0.1em'}}> & </span>
+            <span className="font-chonburi text-white text-[110px] md:text-[140px] lg:text-[170px] leading-none pr-2" style={{lineHeight: '0.8', marginTop: '0.123em'}}> & </span>
             <div className="flex flex-col justify-center">
-              <span className="font-average text-maroon text-[48px] md:text-[72px] lg:text-[80px] leading-none" style={{letterSpacing: '-2px'}}>Product Statement</span>
-              <span className="font-average text-maroon text-[48px] md:text-[72px] lg:text-[80px] leading-none" style={{letterSpacing: '-2px'}}>Target Audience</span>
+              <span
+                className="font-average text-maroon text-[48px] md:text-[72px] lg:text-[80px] leading-none -ml-6 sm:-ml-6 md:-ml-10"
+                style={{ letterSpacing: '-2px' }}
+              >
+                Product Statement
+              </span>
+              <span className="font-average text-maroon text-[48px] md:text-[72px] lg:text-[80px] leading-none" style={{ letterSpacing: '-2px' }}>
+                Target Audience
+              </span>
             </div>
           </div>
 

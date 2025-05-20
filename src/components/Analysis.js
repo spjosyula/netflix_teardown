@@ -102,7 +102,7 @@ const Analysis = () => {
       </div>
 
       {/* Cards Section */}
-      <div className="mt-20 mb-40">
+      <div className="mt-20 mb-60">
         {cards.map((title, index) => (
           <div 
             key={index} 

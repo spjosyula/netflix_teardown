@@ -2,14 +2,16 @@ import React, { useEffect } from 'react';
 
 const OnboardingUserExperienceModal = ({ isOpen, onClose }) => {
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
+    if (typeof document !== 'undefined' && document.body) {
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+      return () => {
+        document.body.style.overflow = '';
+      };
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [isOpen]);
 
   if (!isOpen) return null;
@@ -37,9 +39,13 @@ const OnboardingUserExperienceModal = ({ isOpen, onClose }) => {
 
           {/* Heading */}
           <div className="mt-16 mb-12 flex items-start">
-            <span className="font-chonburi text-maroon text-[100px] md:text-[140px] lg:text-[170px] leading-none pr-2" style={{lineHeight: '0.8', marginTop: '0.1em'}}>&</span>
+            <span className="font-chonburi text-white text-[100px] md:text-[140px] lg:text-[170px] leading-none pr-2" style={{lineHeight: '0.8', marginTop: '0.123em'}}>&</span>
             <div className="flex flex-col justify-center">
-              <span className="font-average text-maroon text-[48px] md:text-[72px] lg:text-[80px] leading-none" style={{letterSpacing: '-2px'}}>Onboarding</span>
+              <span
+                className="font-average text-maroon text-[48px] md:text-[72px] lg:text-[80px] leading-none -ml-4 sm:-ml-8 md:-ml-10"
+                style={{letterSpacing: '-2px'}}>
+                Onboarding
+              </span>
               <span className="font-average text-maroon text-[48px] md:text-[72px] lg:text-[80px] leading-none" style={{letterSpacing: '-2px'}}>User Experience</span>
             </div>
           </div>
