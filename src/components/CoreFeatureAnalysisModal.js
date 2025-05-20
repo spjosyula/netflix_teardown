@@ -46,10 +46,12 @@ const CoreFeatureAnalysisModal = ({ isOpen, onClose }) => {
       } else {
         document.body.style.overflow = '';
       }
-      return () => {
-        document.body.style.overflow = '';
-      };
     }
+    return () => {
+      if (typeof document !== 'undefined' && document.body) {
+        document.body.style.overflow = '';
+      }
+    };
   }, [isOpen]);
 
   if (!isOpen) return null;
