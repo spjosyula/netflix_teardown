@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <Router basename="/netflix-teardown">
+    <Router basename="/netflix_teardown">
       <div className="min-h-screen">
         <Routes>
           <Route path="/" element={<Hero />} />
