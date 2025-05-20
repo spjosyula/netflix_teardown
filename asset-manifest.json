@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/netflix_teardown/static/css/main.f982c84e.css",
+    "main.js": "/netflix_teardown/static/js/main.f541b4a0.js",
+    "index.html": "/netflix_teardown/index.html",
+    "main.f982c84e.css.map": "/netflix_teardown/static/css/main.f982c84e.css.map",
+    "main.f541b4a0.js.map": "/netflix_teardown/static/js/main.f541b4a0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f982c84e.css",
+    "static/js/main.f541b4a0.js"
+  ]
+}
